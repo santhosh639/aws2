@@ -1,0 +1,12 @@
+name: terraform commands
+
+on : push
+
+jobs: 
+  run-terraform-commands:
+      runs-on: ubuntu-latest
+      steps:
+          - name: terraform command
+            run: |
+                 terraform init
+                 terraform apply --auto-approve
